@@ -20,7 +20,28 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    def comapre_str(string1, string2):
+        if type(string1) is str and type(string2) is str:
+            len1 = len(string1)
+            len2 = len(string2)
+            
+            if len1 == len2:
+              return 1
+            elif len1 > len2 and string2 != 'learn':
+              return 2 
+            elif string2 == 'learn':
+              return 3
+            else:
+               return 'No rule for such combinations' 
+        else:
+            return 0
+            
+    for i in range(0, 4):
+        x = {0:1, 1:'Python',2:'hello', 3:'python3'}
+        y = {0:'Python', 1:'learn',2:'hello', 3:'PYTHON'}
+        result = comapre_str(x[i], y[i])
+        print(result)
+        #print(x[i], y[i])
     
 if __name__ == "__main__":
     main()
