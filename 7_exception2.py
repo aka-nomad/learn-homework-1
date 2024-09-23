@@ -22,13 +22,15 @@ def discounted(price, discount, max_discount=20):
       if max_discount >= 100:
         raise ValueError('Слишком большая максимальная скидка')
       return price - (price * discount / 100)
-    except (ValueError, TypeError):
-        print('Переданы некорректные аргументы или не сработало приведение типов данных!')
+    except ValueError:
+        print('Переданы некорректные аргументы')
+    except TypeError:
+        print('Не сработало приведение типов данных!')
     
 if __name__ == "__main__":
     print(discounted(100, 2))
     print(discounted(100, "3"))
     print(discounted("100", "4.5"))
     print(discounted("five", 5))
-    print(discounted("сто", "десять"))
-    print(discounted(100.0, 5, "10"))
+    print(discounted("сто", "десять","five"))
+    print(discounted(100.0, 100, "10"))

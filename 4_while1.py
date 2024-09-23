@@ -17,8 +17,8 @@ def hello_user():
     answer = ''
     
     while True:
-       answer = input('How are you?')
-       if answer in ('Good', 'good'):
+       answer = input('How are you?').lower()
+       if answer == "good":
            break
     
 if __name__ == "__main__":
