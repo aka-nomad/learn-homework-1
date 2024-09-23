@@ -27,9 +27,9 @@ def main():
             
             if len1 == len2:
               return 1
-            elif len1 > len2 and string2 != 'learn':
+            elif len1 > len2:
               return 2 
-            elif string2 == 'learn':
+            elif string2 == 'learn' and string2 != 'learn':
               return 3
             else:
                return 'No rule for such combinations' 
@@ -37,7 +37,7 @@ def main():
             return 0
             
     for i in range(0, 4):
-        x = {0:1, 1:'Python',2:'hello', 3:'python3'}
+        x = {0:1, 1:'Learn',2:'hello', 3:'python3'}
         y = {0:'Python', 1:'learn',2:'hello', 3:'PYTHON'}
         result = comapre_str(x[i], y[i])
         print(result)
