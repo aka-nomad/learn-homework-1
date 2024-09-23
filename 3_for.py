@@ -27,18 +27,20 @@ def main():
     {'product': 'Samsung Galaxy 21', 'items_sold': [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247]},
   ]
     total_sale = 0
+    total_average_sale = 0
 
     for i in range(len(product_sell)):
         item = product_sell[i].get('product', 'no item')
         sale = product_sell[i].get('items_sold', 0)
         
         sum_of_sale = sum(sale)
-        average_sale = sum(sale) // len(sale)
+        average_sale = sum(sale) / len(sale)
         total_sale += sum_of_sale
+        total_average_sale += average_sale
         
         print(f"{item}, Total amount of sale: {sum_of_sale}, Average number of sale:{average_sale}")
     
-    print(f"All items total sales: {total_sale}, All items average sales: {total_sale // len(product_sell)}")    
+    print(f"All items total sales: {total_sale}, All items average sales: {total_average_sale}")    
     
 if __name__ == "__main__":
     main()

@@ -29,7 +29,7 @@ def main():
               return 1
             elif len1 > len2:
               return 2 
-            elif string2 == 'learn' and string2 != 'learn':
+            elif string1 != string2:
               return 3
             else:
                return 'No rule for such combinations' 
